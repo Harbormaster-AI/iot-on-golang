@@ -2,8 +2,22 @@
 package model
 
 import (
-#declareImports(${classObject})
+    "time"
     "gorm.io/gorm"
 )
 
-#declareStruct($classObject)
+//==============================================================
+// TwinChangeEvent Declaration
+//==============================================================
+type TwinChangeEvent struct {
+    gorm.Model
+     EventId                                    string
+    OccurredAt                                                            time.Time
+    TwinId         *uint
+    Twin           *DigitalTwin `gorm:"foreignKey:TwinId"`
+    ChangeType                      TwinChangeType
+
+// parent associations as their child
+
+}
+

@@ -2,8 +2,20 @@
 package model
 
 import (
-#declareImports(${classObject})
     "gorm.io/gorm"
 )
 
-#declareStruct($classObject)
+//==============================================================
+// Building Declaration
+//==============================================================
+type Building struct {
+    gorm.Model
+     Name                                    string
+    SiteId         *uint
+    Site           *Site `gorm:"foreignKey:SiteId"`
+     Floors           []Floor `gorm:"foreignKey:FloorsFromBuildingId"`
+
+// parent associations as their child
+
+}
+

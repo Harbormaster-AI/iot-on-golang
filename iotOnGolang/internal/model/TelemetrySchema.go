@@ -2,8 +2,20 @@
 package model
 
 import (
-#declareImports(${classObject})
     "gorm.io/gorm"
 )
 
-#declareStruct($classObject)
+//==============================================================
+// TelemetrySchema Declaration
+//==============================================================
+type TelemetrySchema struct {
+    gorm.Model
+     SchemaId                                    string
+    SchemaUri                                                            string
+     Streams           []TelemetryStream `gorm:"foreignKey:StreamsFromTelemetrySchemaId"`
+    Encoding                      TelemetryEncoding
+
+// parent associations as their child
+
+}
+
