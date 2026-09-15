@@ -10,20 +10,10 @@ resource "kubernetes_service" "app-master" {
         port {
             name        = "http"
             port        = 80
-            target_port = 4000
+            target_port = #DefaultPort()
         }
 
-        port {
-            name        = "db-port"
-            port        = 
-            target_port = 
-        }
-
-        port {
-            port        = 4000
-            target_port = 4000
-            name        = "app-port"
-        }
+#Expose_K8_Ports()
 
         type = ""
     }

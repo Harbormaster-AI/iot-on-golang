@@ -7,6 +7,7 @@ import (
 	"iotOnGolang/internal/utils"
 	"github.com/google/go-cmp/cmp"
 	"fmt"
+#declareImports()	
 )
 
 func init() {
@@ -19,7 +20,7 @@ func TestDeviceVendorCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for DeviceVendor
 	//----------------------------------------------------------------------------
-	DeviceVendorObj := model.DeviceVendor                                                                                                                            {Name:"test value for Name",LegalName:"test value for LegalName",HeadquartersCountry:"test value for HeadquartersCountry",Website:"test value for Website"}
+	DeviceVendorObj := model.DeviceVendor#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -116,7 +117,7 @@ func TestHardwareModuleCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for HardwareModule
 	//----------------------------------------------------------------------------
-	HardwareModuleObj := model.HardwareModule                                                            {ModuleCode:"test value for ModuleCode",DatasheetUri:new Uri(),ModuleType:0}
+	HardwareModuleObj := model.HardwareModule#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -213,7 +214,7 @@ func TestDeviceModelCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for DeviceModel
 	//----------------------------------------------------------------------------
-	DeviceModelObj := model.DeviceModel                                                                                                                            {Name:"test value for Name",ModelNumber:"test value for ModelNumber",HardwareRevision:"test value for HardwareRevision",SupportedConnectivity:0,DefaultTelemetryEncoding:0}
+	DeviceModelObj := model.DeviceModel#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -310,7 +311,7 @@ func TestFirmwareReleaseCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for FirmwareRelease
 	//----------------------------------------------------------------------------
-	FirmwareReleaseObj := model.FirmwareRelease                                                                                                                    {Version:new FirmwareVersion(),ReleaseDate:time.Now(),ReleaseNotes:"test value for ReleaseNotes",Checksum:new Checksum()}
+	FirmwareReleaseObj := model.FirmwareRelease#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -407,7 +408,7 @@ func TestIoTDeviceCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for IoTDevice
 	//----------------------------------------------------------------------------
-	IoTDeviceObj := model.IoTDevice                                                                                                                                                    {DeviceId:new DeviceId(),SerialNumber:"test value for SerialNumber",LastSeen:time.Now(),FirmwareVersion:new FirmwareVersion(),Status:0,PowerSource:0}
+	IoTDeviceObj := model.IoTDevice#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -504,7 +505,7 @@ func TestSensorInstanceCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for SensorInstance
 	//----------------------------------------------------------------------------
-	SensorInstanceObj := model.SensorInstance                                                                                                            {Name:"test value for Name",Unit:"test value for Unit",SamplingIntervalMs:100,SensorType:0}
+	SensorInstanceObj := model.SensorInstance#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -601,7 +602,7 @@ func TestActuatorInstanceCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for ActuatorInstance
 	//----------------------------------------------------------------------------
-	ActuatorInstanceObj := model.ActuatorInstance                                                            {Name:"test value for Name",CommandTopic:new TopicName(),ActuatorType:0}
+	ActuatorInstanceObj := model.ActuatorInstance#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -698,7 +699,7 @@ func TestTelemetrySchemaCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for TelemetrySchema
 	//----------------------------------------------------------------------------
-	TelemetrySchemaObj := model.TelemetrySchema                                                            {SchemaId:"test value for SchemaId",SchemaUri:new Uri(),Encoding:0}
+	TelemetrySchemaObj := model.TelemetrySchema#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -795,7 +796,7 @@ func TestTelemetryStreamCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for TelemetryStream
 	//----------------------------------------------------------------------------
-	TelemetryStreamObj := model.TelemetryStream                                                                            {StreamName:"test value for StreamName",RetentionDays:100,Qos:0}
+	TelemetryStreamObj := model.TelemetryStream#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -892,7 +893,7 @@ func TestCommandDefinitionCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for CommandDefinition
 	//----------------------------------------------------------------------------
-	CommandDefinitionObj := model.CommandDefinition                                                                                            {Name:"test value for Name",RequestSchemaUri:new Uri(),ResponseSchemaUri:new Uri(),TimeoutSeconds:100}
+	CommandDefinitionObj := model.CommandDefinition#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -989,7 +990,7 @@ func TestCommandInvocationCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for CommandInvocation
 	//----------------------------------------------------------------------------
-	CommandInvocationObj := model.CommandInvocation                                                                                                                                                            {InvocationId:"test value for InvocationId",RequestedAt:time.Now(),CompletedAt:time.Now(),Status:0}
+	CommandInvocationObj := model.CommandInvocation#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -1086,7 +1087,7 @@ func TestAlertRuleCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for AlertRule
 	//----------------------------------------------------------------------------
-	AlertRuleObj := model.AlertRule                                                                            {Name:"test value for Name",Expression:"test value for Expression",Severity:0}
+	AlertRuleObj := model.AlertRule#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -1183,7 +1184,7 @@ func TestAlertCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for Alert
 	//----------------------------------------------------------------------------
-	AlertObj := model.Alert                                                                                                                                                            {RaisedAt:time.Now(),ClearedAt:time.Now(),Message:"test value for Message",Status:0}
+	AlertObj := model.Alert#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -1280,7 +1281,7 @@ func TestTenantCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for Tenant
 	//----------------------------------------------------------------------------
-	TenantObj := model.Tenant                                            {Name:"test value for Name",TenantType:0}
+	TenantObj := model.Tenant#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -1377,7 +1378,7 @@ func TestTenantUserCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for TenantUser
 	//----------------------------------------------------------------------------
-	TenantUserObj := model.TenantUser                                                                                                            {FirstName:"test value for FirstName",LastName:"test value for LastName",Email:"test value for Email",Role:0}
+	TenantUserObj := model.TenantUser#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -1474,7 +1475,7 @@ func TestSiteCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for Site
 	//----------------------------------------------------------------------------
-	SiteObj := model.Site                                                                                                                                                                                            {Name:"test value for Name",Address:new Address(),Timezone:"test value for Timezone",Latitude:"test value",Longitude:"test value"}
+	SiteObj := model.Site#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -1571,7 +1572,7 @@ func TestBuildingCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for Building
 	//----------------------------------------------------------------------------
-	BuildingObj := model.Building                            {Name:"test value for Name"}
+	BuildingObj := model.Building#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -1668,7 +1669,7 @@ func TestFloorCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for Floor
 	//----------------------------------------------------------------------------
-	FloorObj := model.Floor                                                            {Name:"test value for Name",Level:100}
+	FloorObj := model.Floor#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -1765,7 +1766,7 @@ func TestRoomCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for Room
 	//----------------------------------------------------------------------------
-	RoomObj := model.Room                            {Name:"test value for Name"}
+	RoomObj := model.Room#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -1862,7 +1863,7 @@ func TestGatewayCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for Gateway
 	//----------------------------------------------------------------------------
-	GatewayObj := model.Gateway                                            {SoftwareVersion:"test value for SoftwareVersion",Status:0}
+	GatewayObj := model.Gateway#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -1959,7 +1960,7 @@ func TestEdgeApplicationCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for EdgeApplication
 	//----------------------------------------------------------------------------
-	EdgeApplicationObj := model.EdgeApplication                                                                                                            {Name:"test value for Name",Version:"test value for Version",Image:"test value for Image",Status:0}
+	EdgeApplicationObj := model.EdgeApplication#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -2056,7 +2057,7 @@ func TestNetworkProfileCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for NetworkProfile
 	//----------------------------------------------------------------------------
-	NetworkProfileObj := model.NetworkProfile                                                                                                            {ProfileName:"test value for ProfileName",Ssid:"test value for Ssid",Apn:"test value for Apn",ConnectivityType:0}
+	NetworkProfileObj := model.NetworkProfile#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -2153,7 +2154,7 @@ func TestSimCardCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for SimCard
 	//----------------------------------------------------------------------------
-	SimCardObj := model.SimCard                                                                                                            {Iccid:"test value for Iccid",Imsi:"test value for Imsi",Carrier:"test value for Carrier",Status:0}
+	SimCardObj := model.SimCard#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -2250,7 +2251,7 @@ func TestConnectivityPlanCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for ConnectivityPlan
 	//----------------------------------------------------------------------------
-	ConnectivityPlanObj := model.ConnectivityPlan                                                                                            {Name:"test value for Name",DataCapMB:100,BillingCycleDays:100}
+	ConnectivityPlanObj := model.ConnectivityPlan#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -2347,7 +2348,7 @@ func TestMessagingEndpointCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for MessagingEndpoint
 	//----------------------------------------------------------------------------
-	MessagingEndpointObj := model.MessagingEndpoint                                                                                                            {Host:"test value for Host",Port:100,Secure:true,Protocol:0}
+	MessagingEndpointObj := model.MessagingEndpoint#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -2444,7 +2445,7 @@ func TestAccessPolicyCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for AccessPolicy
 	//----------------------------------------------------------------------------
-	AccessPolicyObj := model.AccessPolicy                                                                                                                    {Name:"test value for Name",Scope:"test value for Scope",ExpiresAt:time.Now()}
+	AccessPolicyObj := model.AccessPolicy#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -2541,7 +2542,7 @@ func TestApiKeyCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for ApiKey
 	//----------------------------------------------------------------------------
-	ApiKeyObj := model.ApiKey                                                                                                                                                                            {KeyId:"test value for KeyId",HashedSecret:"test value for HashedSecret",CreatedAt:time.Now(),LastUsedAt:time.Now()}
+	ApiKeyObj := model.ApiKey#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -2638,7 +2639,7 @@ func TestDeviceCertificateCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for DeviceCertificate
 	//----------------------------------------------------------------------------
-	DeviceCertificateObj := model.DeviceCertificate                                                                                                                                                                                            {SerialNumber:"test value for SerialNumber",NotBefore:time.Now(),NotAfter:time.Now(),Fingerprint:"test value for Fingerprint",CertificateType:0}
+	DeviceCertificateObj := model.DeviceCertificate#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -2735,7 +2736,7 @@ func TestProvisioningRecordCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for ProvisioningRecord
 	//----------------------------------------------------------------------------
-	ProvisioningRecordObj := model.ProvisioningRecord                                                                                                                    {EnrolledAt:time.Now(),ProvisioningService:"test value for ProvisioningService",Method:0,Status:0}
+	ProvisioningRecordObj := model.ProvisioningRecord#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -2832,7 +2833,7 @@ func TestDigitalTwinCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for DigitalTwin
 	//----------------------------------------------------------------------------
-	DigitalTwinObj := model.DigitalTwin                                                                                                                                                    {TwinId:"test value for TwinId",DesiredStateVersion:100,ReportedStateVersion:100,LastSyncAt:time.Now()}
+	DigitalTwinObj := model.DigitalTwin#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -2929,7 +2930,7 @@ func TestTwinTemplateCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for TwinTemplate
 	//----------------------------------------------------------------------------
-	TwinTemplateObj := model.TwinTemplate                                                                            {Name:"test value for Name",SchemaUri:new Uri(),Version:"test value for Version"}
+	TwinTemplateObj := model.TwinTemplate#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -3026,7 +3027,7 @@ func TestTwinChangeEventCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for TwinChangeEvent
 	//----------------------------------------------------------------------------
-	TwinChangeEventObj := model.TwinChangeEvent                                                                                                    {EventId:"test value for EventId",OccurredAt:time.Now(),ChangeType:0}
+	TwinChangeEventObj := model.TwinChangeEvent#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -3123,7 +3124,7 @@ func TestMaintenanceTicketCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for MaintenanceTicket
 	//----------------------------------------------------------------------------
-	MaintenanceTicketObj := model.MaintenanceTicket                                                                                                                                                                            {TicketNumber:"test value for TicketNumber",OpenedAt:time.Now(),ClosedAt:time.Now(),Priority:0,Status:0}
+	MaintenanceTicketObj := model.MaintenanceTicket#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -3220,7 +3221,7 @@ func TestDataRetentionPolicyCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for DataRetentionPolicy
 	//----------------------------------------------------------------------------
-	DataRetentionPolicyObj := model.DataRetentionPolicy                                                            {Name:"test value for Name",RetentionDays:100}
+	DataRetentionPolicyObj := model.DataRetentionPolicy#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -3317,7 +3318,7 @@ func TestSoftwareUpdateCampaignCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for SoftwareUpdateCampaign
 	//----------------------------------------------------------------------------
-	SoftwareUpdateCampaignObj := model.SoftwareUpdateCampaign                                                                                                                                                            {CampaignCode:"test value for CampaignCode",ScheduledStart:time.Now(),ScheduledEnd:time.Now(),Status:0}
+	SoftwareUpdateCampaignObj := model.SoftwareUpdateCampaign#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -3414,7 +3415,7 @@ func TestSoftwareUpdateExecutionCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for SoftwareUpdateExecution
 	//----------------------------------------------------------------------------
-	SoftwareUpdateExecutionObj := model.SoftwareUpdateExecution                                                                                                                            {StartedAt:time.Now(),CompletedAt:time.Now(),Status:0}
+	SoftwareUpdateExecutionObj := model.SoftwareUpdateExecution#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -3511,7 +3512,7 @@ func TestDeviceGroupCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for DeviceGroup
 	//----------------------------------------------------------------------------
-	DeviceGroupObj := model.DeviceGroup                                                            {Name:"test value for Name",Criteria:"test value for Criteria"}
+	DeviceGroupObj := model.DeviceGroup#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create
@@ -3608,7 +3609,7 @@ func TestUsageRecordCRUD(t *testing.T) {
 	//----------------------------------------------------------------------------
 	// Test CRUD for UsageRecord
 	//----------------------------------------------------------------------------
-	UsageRecordObj := model.UsageRecord                                                                                                                                                                            {PeriodStart:time.Now(),PeriodEnd:time.Now(),MessagesSent:100,DataVolumeMB:100}
+	UsageRecordObj := model.UsageRecord#defaultTestStructOutput(${class})
 
 	// --------------------------------------------------------------
 	// Check Create

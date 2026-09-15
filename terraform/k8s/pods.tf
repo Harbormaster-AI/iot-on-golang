@@ -10,46 +10,7 @@ resource "kubernetes_replication_controller" "app-master" {
             app  = "iotOnGolang"
         }
 
-        template {
-
-            metadata {
-                labels = {
-                    app  = "iotOnGolang"
-                }
-            }
-
-            spec {
-                container {
-                    image = ":latest"
-                    name  = "db-container"
-
-                    port {
-                        container_port = unset-value
-                    }
-
-                    resources {
-                        requests = {
-                            cpu    = "100m"
-                            memory = "100Mi"
-                        }
-                    }
-                }
-                container {
-                    image = "theharbormaster/iot-on-golang:latest"
-                    name  = "app-container"
-
-                    port {
-                        container_port = 4000
-                    }
-                    resources {
-                        requests = {
-                            cpu    = "100m"
-                            memory = "100Mi"
-                        }
-                    }
-                }
-            }
-        }
+#Declare_K8_Containers()
 
     }
 }
