@@ -1,6 +1,6 @@
 package model
 
-
+$generateAppStats.applyMetaDataTagWithCountWithCount( "Enum Design Pattern", "A fixed set of named values that represent the valid states, types, or choices for a domain concept.", $enumsSize )
 //==============================================================
 // ConnectivityType Declaration
 //==============================================================
