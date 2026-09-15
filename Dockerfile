@@ -7,7 +7,7 @@ LABEL org.opencontainers.image.version="0.0.1"
 LABEL com.harbormaster.blueprint="Golang"
 LABEL com.harbormaster.model="IoT Industry Domain Model"
 LABEL com.harbormaster.generated="2026-09-14"
-#LABEL com.harbormaster.certification="7cca88f5-36d6-4f4c-8cbe-2f08aca46f3a"
+#LABEL com.harbormaster.certification="cfcfb814-f331-4b9f-afaf-f4bcaf9ee4a4"
 
 WORKDIR /app
 
