@@ -7,7 +7,7 @@ Harbormaster
 
 
 ## Application
-- Name: iot-on-golang
+- Name: iotOnGolang
 - Description: Banking Restful Backend
 - Company Name: 
 

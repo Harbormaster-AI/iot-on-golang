@@ -7,14 +7,14 @@ resource "kubernetes_replication_controller" "app-master" {
         replicas = 1
 
         selector = {
-            app  = "iot-on-golang"
+            app  = "iotOnGolang"
         }
 
         template {
 
             metadata {
                 labels = {
-                    app  = "bankingbackend"
+                    app  = "iotOnGolang"
                 }
             }
 
@@ -28,7 +28,7 @@ resource "kubernetes_replication_controller" "app-master" {
                     }
 
                     resources {
-                        requests {
+                        requests = {
                             cpu    = "100m"
                             memory = "100Mi"
                         }
@@ -38,13 +38,14 @@ resource "kubernetes_replication_controller" "app-master" {
                     image = "theharbormaster/iot-on-golang:latest"
                     name  = "app-container"
 
-                port {
-                    container_port = 4000
-                }
-                resources {
-                    requests {
-                        cpu    = "100m"
-                        memory = "100Mi"
+                    port {
+                        container_port = 4000
+                    }
+                    resources {
+                        requests = {
+                            cpu    = "100m"
+                            memory = "100Mi"
+                        }
                     }
                 }
             }

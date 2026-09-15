@@ -5,7 +5,7 @@ resource "kubernetes_service" "app-master" {
 
     spec {
         selector = {
-          app  = "iot-on-golang"
+          app  = "iotOnGolang"
         }
         port {
             name        = "http"
